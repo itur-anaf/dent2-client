@@ -10,7 +10,7 @@ import { UpdatePasswordRequestData } from "./requests/updatePassword/updatePassw
 import { ServiceBase } from "./service.base";
 
 class UserService extends ServiceBase {
-  prefix = "/user";
+  prefix = "/auth";
   async whoAmI() {
     return await this.get<User>("/me");
   }
