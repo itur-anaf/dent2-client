@@ -14,7 +14,7 @@ import { useState } from "react";
 import React from "react";
 import Preloader from "../../common/Preloader";
 import useNavigator from "../../../hooks/useNavigator";
-import welcomeBG from "../../../assets/images/welcomeCardBg.png";
+import welcomeBG from "../../../assets/images/dnetDradient.png";
 import InputStyle from "../../common/form/InputStyle";
 import { InputText } from "primereact/inputtext";
 
@@ -41,7 +41,7 @@ const NoticeWrapper = styled.div`
 `;
 
 const CardStyle = styled.div`
-  background-color: #9034e8;
+  background-color: #6300c1;
   background-blend-mode: soft-light;
   padding: 0 3rem;
   position: relative;

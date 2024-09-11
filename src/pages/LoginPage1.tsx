@@ -1,20 +1,15 @@
 import { InputText } from "primereact/inputtext";
-import { ReactComponent as GoogleIcon } from "../assets/Icons/ColoredGoogle.svg";
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import userService from "../core/services/user.service";
 import { useSetRecoilState } from "recoil";
 import { userState } from "../state/userState";
 import styled from "styled-components";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { LoginRequestData } from "../core/services/requests/login/loginRequestData";
 import { Message } from "primereact/message";
-import RegexValidations from "../core/validation/regexValidations";
 import FormStyle from "../components/common/form/FormStyle";
 import Button from "../components/common/form/Button";
-import { ReactComponent as Logo } from "../../assets/Logo/DnetLogo.svg";
 import Link from "../components/common/Link";
-import { User } from "../core/entities/user";
 import AppConfig from "../config/appConfig";
 import AuthHeader from "../components/auth/AuthHeader";
 import ErrorMessage from "../components/common/ErrorMessage";
@@ -256,16 +251,8 @@ const LoginPage: React.FC = () => {
         className="form-mobile"
         onKeyDown={(e) => e.keyCode === 13 && handleSubmit(onSubmit)(e)}
       >
-        <GoogleButton
-          onClick={onClickGoogleButton}
-          className="google-button-mobile"
-        >
-          <GoogleIcon />
-          להמשיך עם גוגל{" "}
-        </GoogleButton>
-        <OrText className="or-text-mobile">או להמשיך באימייל</OrText>
         <div className="w-full mb-5">
-          <label>אימייל</label>
+          <label>מספר אישי</label>
           <InputText
             {...register("pNumber", {
               required: true,
